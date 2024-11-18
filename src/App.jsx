@@ -11,11 +11,15 @@ const App = () => {
     setCount(count + value);
   }
 
+  const handleDelete = () => {
+    setCount(0);
+  }
+
   return (
     <Wrapper>
       <Title>Simple Counter</Title>
       <Viewer count={count} />
-      <Controller onClickButton={onClickButton} />
+      <Controller onClickButton={onClickButton} handleDelete={handleDelete} />
     </Wrapper>
   )
 }
